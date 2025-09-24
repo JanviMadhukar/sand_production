@@ -18,50 +18,61 @@ This project demonstrates how **machine learning** can be applied to **predict s
 - Interpret feature importance for engineering insights.
 - Visualize results with professional plots.
 
----
+
 
 ## 🏗️ Project Workflow
 
-
-Sand Production ML Project
-├── Data Generation
-│   ├── Reservoir properties (density, pressure, permeability, clay, etc.)
-│   ├── Rock mechanics (cohesion, friction angle, cement quality)
-│   ├── Completion type (OpenHole, CasedHole, Gravel_Pack)
-│   └── Operational factors (flow rate, drawdown, etc.)
-│
-├── Preprocessing
-│   ├── Label Encoding for categorical variables
-│   ├── Feature scaling (StandardScaler)
-│   └── Train/Test split
-│
-├── Model Training
-│   ├── Linear Regression
-│   ├── Random Forest Regressor
-│   └── Gradient Boosting Regressor
-│
-├── Evaluation
-│   ├── R² (train/test)
-│   ├── RMSE (Root Mean Squared Error)
-│   ├── MAE (Mean Absolute Error)
-│   └── Cross-validation
-│
-├── Feature Importance
-│   └── Random Forest feature ranking
-│
-├── Visualization
-│   ├── Model comparison (R², RMSE)
-│   ├── Actual vs Predicted
-│   ├── Feature importance chart
-│   ├── Residuals plot
-│   └── Distribution plots
-│
-└── Outputs
-    ├── sand_data.csv (synthetic dataset)
-    └── feature_importance.csv (RandomForest feature ranking)
-````
+The workflow of this project is divided into four main stages:
 
 ---
+
+### 1️⃣ Data Generation
+- Synthetic dataset is generated using petroleum engineering principles.
+- Includes features like **Permeability, Cohesion, Grain Size, Density, Flow Rate, Drawdown, Friction Angle, Cement Quality, Clay Content, Reservoir Pressure, and Completion Type**.
+- Target variable: **Sand_Production** (calculated from physical + operational parameters with random noise for realism).
+- Dataset exported as `sand_data.csv`.
+
+---
+
+### 2️⃣ Model Training & Evaluation
+- Input features are preprocessed:
+  - Encode categorical variable (**Completion Type**).
+  - Standardize features using `StandardScaler`.
+- Split into **train (80%)** and **test (20%)** sets.
+- Train three models:
+  - **Linear Regression**
+  - **Random Forest Regressor**
+  - **Gradient Boosting Regressor**
+- Evaluate models on:
+  - R² (coefficient of determination)
+  - RMSE (Root Mean Squared Error)
+  - MAE (Mean Absolute Error)
+  - Cross-validation error (CV)
+- Best model selected based on **highest test R²**.
+
+---
+
+### 3️⃣ Feature Importance Analysis
+- Use **Random Forest Regressor** for feature importance.
+- Rank input features by contribution to sand production prediction.
+- Export results as `feature_importance.csv`.
+
+---
+
+### 4️⃣ Visualization & Reporting
+- Generate plots for:
+  - Model comparison (R², RMSE)
+  - Actual vs Predicted values
+  - Top feature importance (bar chart)
+  - Residual analysis
+  - Distribution of actual vs predicted values
+- Print summary table of model metrics in console.
+- Save processed data and feature importance files for further use.
+
+---
+
+✅ This workflow ensures a **complete pipeline**: from data generation → model training → evaluation → feature interpretation → visualization.
+
 
 ## ⚙️ Installation & Setup
 
