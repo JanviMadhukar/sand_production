@@ -176,21 +176,4 @@ Top Features (RandomForest):
 
 ---
 
-## 👤 Author
 
-Developed by **\[Your Name]** 👨‍💻
-📌 Petroleum Engineering + Data Science Enthusiast
-📌 Open to collaboration & feedback
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
-
-```
-
----
-
-👉 Do you also want me to create the **`requirements.txt` file** for you so your repo looks complete and anyone can run it with one command?
-```
