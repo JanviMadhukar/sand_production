@@ -148,7 +148,7 @@ Top Features (RandomForest):
 * Feature importance (top 10)
 * Residuals plot
 * Distribution of actual vs predicted sand production
-
+![Model Plots](plots.png)
 ---
 
 ## 📂 Output Files
